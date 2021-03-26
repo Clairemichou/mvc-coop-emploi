@@ -1,0 +1,25 @@
+Nouveau module a faire (controleur ect...)
+mvc-ce-08 -> ajouter le mod_reunion :
+Liste : - tableau avec :
+		 - id 
+		 - date (Mardi 17 Novembre 2020)
+		 - Lieu (nom de la salle + ville -> concaténation)
+		 - accompagnateur (Prénom + NOM -> concaténation)
+		 - statut de publication (oui ou non)
+		 - action (modification, consultation, suppression) 
+
+	- Bouton "ajouter une réunion"
+
+Menu.tpl -> sous l'item réunion : rénions en cours (réunion dont la date est > ou = à la date du jour) et réunions passées (réunion dont la date est < à la date du jour)
+Pour les réunions passées = pas de bouton "ajouter" --> juste "consulter".
+
+Fiche : nécéssaire pour les 4 actions de base.
+	- date (en consultation -> jour/moi/année, en ajout -> date > à la date du jour et obligatoir)
+	- heure (type time avec attribut pour mettre des plages de 30 uniquement entre 8h et 20h)
+	- durée (non obligatoir + même format que l'heure)
+	- lieu (select unique -> récupérer l'identifiant du lieu pour afficher le nom de la salle et de la ville)
+	- capacitée d'accueil (entre 1 et 200 personne)
+	- déscription (zone text type text area -> plugin éditeur de text aréa pour mettre letext en gras, italique...)
+	- accompagnateur ( même forme que pour la liste dans une zone select unique)
+	- statut de publication ( bouton radio mis à non automatiquement)
+Mettre des astérisques devant les champs obligatoires  

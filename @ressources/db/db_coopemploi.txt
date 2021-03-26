@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS x19v_lieu(
+lie_ide INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'identifiant',
+lie_nom VARCHAR(38) NOT NULL COMMENT 'Nom de l''établissement',
+lie_ad1 VARCHAR(38) DEFAULT NULL COMMENT '1 Service, N° de bureau ou d''étage',
+lie_ad2 VARCHAR(38) DEFAULT NULL COMMENT '2 Nom de résidence, d''immeuble, de bâtiment, ZI',
+lie_ad3 VARCHAR(38) DEFAULT NULL COMMENT '3 N° de la voie, le type, nom de la voie',
+lie_ad4 VARCHAR(38) DEFAULT NULL COMMENT '4 Mention de distribution, Lieu-dit',
+lie_cpo VARCHAR(5) NOT NULL COMMENT 'Code postal',
+lie_vil VARCHAR(33) NOT NULL COMMENT 'Ville, Localité et cedex',
+lie_tel VARCHAR(14) DEFAULT NULL COMMENT 'téléphone de l''établissement',
+lie_con VARCHAR(38) DEFAULT NULL COMMENT 'Nom de contact',
+lie_tco VARCHAR(14) DEFAULT NULL COMMENT 'téléphone du contact',
+lie_cap TINYINT(4) NOT NULL COMMENT 'capacité d''accueil de la salle'  
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO x19v_lieu(lie_nom, lie_ad1, lie_ad2, lie_ad3, lie_ad4, lie_cpo, lie_vil, lie_tel, lie_con, lie_tco, lie_cap)
+VALUE('Espace Pierre Mendés France 2', 'Etage 6', 'Immeuble BQ', '38 rue Isidore de Séville', 'BP712', '74000', 'ANNECY', '04 10 10 10 10', 'Sophie AZERTY', '06 10 10 10 10', '50');

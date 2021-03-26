@@ -1,0 +1,1 @@
+mysqldump -u root -p db_coopemploi > C:\Users\cmichel\Desktop\db_coopemploi_v01.sql

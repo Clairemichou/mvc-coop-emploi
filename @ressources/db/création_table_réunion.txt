@@ -1,0 +1,13 @@
+CREATE TABLE x19v_reunion(
+reu_ide int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT 'Identifiant',
+reu_dat date NOT NULL COMMENT 'Date de la réunion',
+reu_heu time NOT NULL COMMENT 'Heure de début de réunion',
+reu_dur time DEFAULT NULL COMMENT 'Durée prévisible de la réunion',
+reu_lie int(11) NOT NULL COMMENT 'Lieu de la réunion',
+reu_cap smallint(3) NOT NULL COMMENT 'Capacité d''inscription',
+reu_pre text COMMENT 'Présentation, objectif ou thème de la réunion',
+reu_acc int(11) NOT NULL COMMENT ' Accompagnateur présent',
+reu_pub tinyint(1) NOT NULL DEFAULT 0 COMMENT 'Publié ou pas',
+CONSTRAINT reu_lie_alias FOREIGN KEY (reu_lie) REFERENCES x19v_lieu(lie_ide),
+CONSTRAINT reu_acc_alias FOREIGN KEY (reu_acc) REFERENCES x19v_accompagnateur(acc_ide)
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;

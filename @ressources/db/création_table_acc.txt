@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS x19v_accompagnateur(
+acc_ide INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Identifiant',
+acc_nom VARCHAR(50) NOT NULL COMMENT 'Nom de l"accompagnateur',
+acc_prenom VARCHAR(50) NOT NULL COMMENT 'Prenom de l"accompagnateur',
+acc_tel VARCHAR(14) NOT NULL COMMENT 'Téléphone de l"accompagnateur',
+acc_mail VARCHAR(255) NOT NULL COMMENT 'Adresse mail de l"accompagnateur', 
+acc_spe VARCHAR(100) DEFAULT NULL COMMENT 'Spécialisation de l"accompagnateur',
+acc_log VARCHAR(255) NOT NULL UNIQUE COMMENT 'Login de l"accompagnateur',
+acc_mpa VARCCHAR(255) NOT NULL COMMENT 'Mot de passe chiffré')ENGINE=InnoDB DEFAULT CHARSET=utf8;
